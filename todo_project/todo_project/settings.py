@@ -31,7 +31,8 @@ DEBUG = os.getenv("DEBUG") == "True"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['192.168.0.100']
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -42,8 +43,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'rest_framework',
     'todo_app',
-    'corsheaders'
+    'corsheaders',
+    'users'
 ]
+
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -104,6 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
 
+
+AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
