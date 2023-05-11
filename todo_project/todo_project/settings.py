@@ -31,7 +31,7 @@ DEBUG = os.getenv("DEBUG") == "True"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ALLOWED_HOSTS = ['192.168.0.100']
+ALLOWED_HOSTS = ['192.168.0.100', '127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'auth.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
